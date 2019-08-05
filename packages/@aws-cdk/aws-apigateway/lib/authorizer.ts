@@ -11,11 +11,15 @@ export interface IAuthorizer {
   readonly authorizerId: string;
 }
 
+export interface AuthorizerProps extends CfnAuthorizerProps  {
+
+}
+
 /**
  * A Authorizer of a REST API.
  */
 export class Authorizer extends CfnAuthorizer {
-  constructor(scope: Construct, id: string, props: CfnAuthorizerProps) {
+  constructor(scope: Construct, id: string, props: AuthorizerProps) {
     super(scope, id, props);
   }
 
